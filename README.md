@@ -6,7 +6,7 @@
 
 | 项目 | 说明 |
 |---|---|
-| 版本 | v1.0.3 |
+| 版本 | v1.0.4 |
 | 适用 | Android 11+（13+ 的 ABX 二进制 XML 已适配），Magisk / KernelSU / APatch |
 | 依赖 | 无需 Xposed、无需独立二进制；仅 shell + toybox + inotify |
 | 许可 | MIT |
@@ -48,7 +48,7 @@ busybox 自动探测 Magisk / KernelSU / APatch 三处路径，全部缺失时�
 命令行安装（Magisk）：
 
 ```sh
-su -c 'magisk --install-module /sdcard/Download/FJGuard-v1.0.3.zip'
+su -c 'magisk --install-module /sdcard/Download/FJGuard-v1.0.4.zip'
 ```
 
 > KSU / APatch 请用各自管理器的"安装模块"功能刷入同一个 zip；包内的 `META-INF/update-binary` 只有 Magisk 会读，其他管理器忽略。

@@ -1,5 +1,12 @@
 # 更新日志
 
+## v1.0.4
+
+- **署名**：作者改为 `只为你做诗`
+- **在线更新**：`module.prop` 增加 `updateJson`（jsDelivr 镜像，国内免代理）
+- 版本号同步至 v1.0.4（versionCode 104）
+
+
 ## v1.0.3
 
 - **兼容性**：busybox 探测扩展为 Magisk / KernelSU / APatch / 系统自带多路径，全部缺失时退回 `/system/bin` 的 toybox（纯 KSU 无 Magisk 环境可运行）

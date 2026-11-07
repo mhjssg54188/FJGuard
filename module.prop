@@ -1,6 +1,7 @@
 id=fjguard
 name=防格机全防 · FJGuard
-version=v1.0.3
-versionCode=103
-author=DeepSeek Harness
+version=v1.0.4
+versionCode=104
+author=只为你做诗
 description=多层级防格机/防砖：关键文件快照+开机自愈、删改实时回滚、破坏性指令拦截、双守护自愈、空间耗尽预警、SELinux 上下文修复。可用 ctl.sh 管理。
+updateJson=https://cdn.jsdelivr.net/gh/mhjssg54188/FJGuard@main/update.json

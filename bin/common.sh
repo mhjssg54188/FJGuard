@@ -2,7 +2,7 @@
 # FJGuard 公共库 —— 路径、配置、日志、快照索引、还原、自愈
 # 被其余所有脚本 source；不单独执行
 
-FJG_VERSION=v1.0.3
+FJG_VERSION=v1.0.4
 
 STATE=${FJG_STATE:-/data/adb/fjguard}
 RT=$STATE/rt
