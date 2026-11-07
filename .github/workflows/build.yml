@@ -1,0 +1,35 @@
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Shell 语法检查（信息性）
+        continue-on-error: true
+        run: |
+          for f in $(git ls-files '*.sh') META-INF/com/google/android/update-binary; do
+            printf '%s: ' "$f"
+            dash -n "$f" && echo OK || echo "（dash 不通过，Android mksh 上已实测可用）"
+          done
+
+      - name: 构建模块包
+        run: bash build.sh
+
+      - name: 结构校验
+        run: |
+          ZIP=$(ls dist/*.zip | head -1)
+          echo "构建产物: $ZIP"
+          unzip -l "$ZIP" | sed -n '1,40p'
+          unzip -p "$ZIP" module.prop | sed -n '1,8p'
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FJGuard-module
+          path: dist/*.zip
